@@ -14,7 +14,27 @@ a = <input [(ngModel)]="a" type="text">
 b = <input [(ngModel)]="b" type="text">
 <br/><br/>
 a*b={{a*b}}
-
-<div *ngFor="let buah of itembuah">
-  {{buah.nama}} - {{buah.harga | currency:'Rp'}}
+<br/><br/>
+<div *ngFor="let buah of itembuah; let i = index">
+  {{i+1}}. {{buah.nama}} - {{buah.harga | currency:'Rp'}}
 </div>
+<br/><br/>
+<div *ngFor="let item of itemArr">
+  {{item}}
+</div>
+<p *ngIf="show">menampilkan nilai jika show = true</p>
+<ng-template *ngIf="show;then showblock; else notShowBlock">
+  <p>
+    Show when "show" is true
+  </p>
+</ng-template>
+<ng-template #showBlock>
+  <p>
+    Show is True
+  </p>
+</ng-template>
+<ng-template #notShowBlock>
+  <p>
+    Show is False
+  </p>
+</ng-template>

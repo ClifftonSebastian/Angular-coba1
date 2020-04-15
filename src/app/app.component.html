@@ -2,3 +2,19 @@
 <p>
   Start editing to see some magic happen :)
 </p>
+
+<br/><br/>
+
+{{"CONTOH"}}
+<br/><br/>
+25+25 = {{25+25}}
+
+<br/><br/>
+a = <input [(ngModel)]="a" type="text">
+b = <input [(ngModel)]="b" type="text">
+<br/><br/>
+a*b={{a*b}}
+
+<div *ngFor="let buah of itembuah">
+  {{buah.nama}} - {{buah.harga | currency:'Rp'}}
+</div>
